@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manuales de uso — Control de Inserción de Trama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<aside class="sb" id="sb">
+  <div class="sb-h">
+    <h1>Manuales de uso</h1>
+    <p>Control de Inserción de Trama · 7mo Informática 2026</p>
+  </div>
+  <div class="sb-acc">
+    <button class="tema" id="tema" aria-label="Cambiar tema"><span id="tema-ico">◐</span><span id="tema-txt">Modo oscuro</span></button>
+  </div>
+  <div class="sb-find"><input type="search" id="buscar" placeholder="Buscar en el índice…" autocomplete="off"></div>
+  <nav id="nav">
+    <div class="nav-pane" data-pane="web">
+<div class="ngrupo"><a href="#web-1" class="n0">1 · Qué es esta aplicación</a></div>
+<div class="ngrupo"><a href="#web-2" class="n0">2 · Ingresar a la aplicación (inicio de sesión)</a><button class="plg" aria-label="Plegar" data-num="2"></button></div>
+<a href="#web-2-1" class="n1" data-pad="2">2.1 · Ingresar con huella dactilar (usuario ya registrado)</a>
+<a href="#web-2-2" class="n1" data-pad="2">2.2 · Registrar la huella dactilar por primera vez</a>
+<a href="#web-2-3" class="n1" data-pad="2">2.3 · No se puede ingresar con la huella (recupero de acceso)</a>
+<div class="ngrupo"><a href="#web-3" class="n0">3 · Pantalla de Inicio</a><button class="plg" aria-label="Plegar" data-num="3"></button></div>
+<a href="#web-3-1" class="n1" data-pad="3">3.1 · Información de sesión</a>
+<a href="#web-3-2" class="n1" data-pad="3">3.2 · Dibujo actual</a>
+<a href="#web-3-3" class="n1" data-pad="3">3.3 · Accesos directos</a>
+<a href="#web-3-4" class="n1" data-pad="3">3.4 · Modo oscuro</a>
+<div class="ngrupo"><a href="#web-4" class="n0">4 · Pantalla Editor de Dibujo</a><button class="plg" aria-label="Plegar" data-num="4"></button></div>
+<a href="#web-4-1" class="n1" data-pad="4">4.1 · Definir el tamaño de la matriz</a>
+<a href="#web-4-2" class="n1" data-pad="4">4.2 · Nombrar el dibujo</a>
+<a href="#web-4-3" class="n1" data-pad="4">4.3 · Estado real del telar</a>
+<a href="#web-4-4" class="n1" data-pad="4">4.4 · Dibujar la matriz</a>
+<a href="#web-4-5" class="n1" data-pad="4">4.5 · Herramientas del editor</a>
+<a href="#web-4-6" class="n1" data-pad="4">4.6 · Controlar la ejecución del tejido: qué hace cada botón realmente</a>
+<a href="#web-4-7" class="n1" data-pad="4">4.7 · Guardar y crear dibujos</a>
+<div class="ngrupo"><a href="#web-5" class="n0">5 · Pantalla Biblioteca de Dibujos</a></div>
+<div class="ngrupo"><a href="#web-6" class="n0">6 · Sobre los usuarios del sistema</a></div>
+<div class="ngrupo"><a href="#web-7" class="n0">7 · Pendientes para la versión final del manual</a></div>
+</div>
+<div class="nav-pane oculto" data-pane="fab">
+<div class="ngrupo"><a href="#fab-1" class="n0">1 · Introducción</a></div>
+<div class="ngrupo"><a href="#fab-2" class="n0">2 · Qué telar es y cómo funciona</a><button class="plg" aria-label="Plegar" data-num="2"></button></div>
+<a href="#fab-2-1" class="n1" data-pad="2">2.1 · El sistema de tejido</a>
+<a href="#fab-2-2" class="n1" data-pad="2">2.2 · Dos funciones separadas en el telar</a>
+<div class="ngrupo"><a href="#fab-3" class="n0">3 · La modificación que le estamos haciendo al telar</a><button class="plg" aria-label="Plegar" data-num="3"></button></div>
+<a href="#fab-3-1" class="n1" data-pad="3">3.1 · Lo que ya está hecho (Nivel 1)</a>
+<a href="#fab-3-2" class="n1" data-pad="3">3.2 · Lo que viene después (Nivel 2 — todavía no está instalado)</a>
+<div class="ngrupo"><a href="#fab-4" class="n0">4 · Uso del telar — paso a paso</a><button class="plg" aria-label="Plegar" data-num="4"></button></div>
+<a href="#fab-4-1" class="n1" data-pad="4">4.1 · Partes de la máquina</a>
+<a href="#fab-4-2" class="n1" data-pad="4">4.2 · Puesta en marcha</a>
+<a href="#fab-4-3" class="n1" data-pad="4">4.3 · Operación normal</a>
+<a href="#fab-4-4" class="n1" data-pad="4">4.4 · Detención y parada</a>
+<a href="#fab-4-5" class="n1" data-pad="4">4.5 · Situaciones de error o emergencia</a>
+<div class="ngrupo"><a href="#fab-5" class="n0">5 · Puntos pendientes</a></div>
+</div>
+</nav>
+</aside>
+
+<button class="mtoggle" id="mt" aria-label="Menú">☰</button>
+
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker">Documentación · Manuales</div>
+    <h2>Manuales de uso</h2>
+    <p class="sub">Cómo se opera la aplicación web y cómo funciona el telar en la planta</p>
+    <p class="lead">Dos manuales complementarios. El primero explica el uso de la aplicación paso a paso, desde el ingreso hasta la ejecución de un dibujo. El segundo describe la máquina intervenida, qué se le modificó y cómo se la opera en el taller.</p>
+  </header>
+
+  <div class="tabs" role="tablist">
+    <button class="tab activo" data-pane="web" role="tab" aria-selected="true">
+      <span class="ic">▤</span>
+      <span class="tt">Aplicación web</span>
+      <span class="ts">Diseñar, guardar y ejecutar dibujos</span>
+    </button>
+    <button class="tab" data-pane="fab" role="tab" aria-selected="false">
+      <span class="ic">⚙</span>
+      <span class="tt">Telar en fábrica</span>
+      <span class="ts">La máquina, la modificación y su uso</span>
+    </button>
+  </div>
+
+  <div class="pane" data-pane="web">
+<p>Este documento contiene la explicación completa, paso a paso, de cómo se usa la aplicación web de control del telar. Es el contenido: la secuencia de pasos, las explicaciones de cada pantalla y de cada botón. El formato final (tipografía, diagramación, capturas de pantalla reales, orden visual) lo define la persona encargada del diseño del manual. Las capturas de pantalla se van a incorporar en una etapa posterior.</p>
+<section id="web-1">
+<h2><span class="n">1</span>Qué es esta aplicación</h2>
+<p>La aplicación web &quot;Control de Inserción de Trama&quot; es el sistema que reemplaza, a nivel de diseño y de datos, a la máquina lectora de secuencia del telar (la que hoy funciona con tarjetas o cinta perforada física). Desde la web se hace lo siguiente:</p>
+<ul>
+<li>Se diseña la matriz o &quot;dibujo&quot; que el telar tiene que tejer.</li>
+<li>Se guarda ese dibujo en una biblioteca, para reutilizarlo cuando haga falta.</li>
+<li><b>Se envía el dibujo al telar y se controla su ejecución:</b> iniciar, pausar, retroceder. Además, la web refleja lo que se hace desde la botonera del telar: si un operario aprieta Marcha, Pausa o Retroceder en la máquina, el ESP32 lo detecta y la pantalla se actualiza sola.</li>
+<li><b>Se consulta el estado real del telar en todo momento:</b> si el equipo de control (ESP32) está conectado, y si el telar está tejiendo, pausado o detenido.</li>
+</ul>
+<p>Es importante remarcar el alcance actual del sistema: hoy la web controla el arranque y la parada del telar (mediante el ESP32, que aprieta a distancia los mismos botones físicos de Marcha y Pausa de la máquina). La web todavía no dicta la secuencia completa del dibujo al mecanismo del telar paso por paso — eso sigue siendo tarea de la lectora física (cinta perforada) mientras se desarrolla la siguiente etapa del proyecto. En otras palabras: la web decide y guarda **qué** se va a tejer, y puede arrancar y parar la máquina, pero todavía no reemplaza físicamente a la lectora de secuencia.</p>
+<p>La aplicación tiene tres pantallas principales, a las que se accede desde el menú inferior: Inicio, Editor y Biblioteca.</p>
+</section>
+<section id="web-2">
+<h2><span class="n">2</span>Ingresar a la aplicación (inicio de sesión)</h2>
+<p>Al abrir la página aparece la pantalla de ingreso. Existen tres caminos posibles, según la situación.</p>
+<figure class="tel"><img src="img/web_image4.jpg" alt="Pantalla de ingreso, con las tres opciones disponibles." loading="lazy"><figcaption>Pantalla de ingreso, con las tres opciones disponibles.</figcaption></figure>
+<h3 id="web-2-1">2.1. Ingresar con huella dactilar (usuario ya registrado)</h3>
+<ul>
+<li><span class="num">1</span>Escribir el nombre de usuario en el campo correspondiente.</li>
+<li><span class="num">2</span>Tocar el botón &quot;Entrar con huella dactilar&quot;.</li>
+<li><span class="num">3</span>Cuando el dispositivo lo solicite, apoyar el dedo en el lector de huella para confirmar la identidad.</li>
+<li><span class="num">4</span>Si la huella coincide con la registrada para ese usuario, la aplicación abre la pantalla de Inicio directamente.</li>
+</ul>
+<h3 id="web-2-2">2.2. Registrar la huella dactilar por primera vez</h3>
+<p>Este paso se hace una sola vez por usuario, la primera vez que esa persona va a usar el sistema.</p>
+<ul>
+<li><span class="num">1</span>Escribir el nombre de usuario elegido.</li>
+<li><span class="num">2</span>Tocar el botón &quot;Registrar mi huella dactilar&quot;.</li>
+<li><span class="num">3</span>Confirmar mediante el lector de huella del dispositivo.</li>
+<li><span class="num">4</span>La aplicación muestra en pantalla un código de recuperación, compuesto por letras y números. Este código:</li>
+<li><b>Es fijo:</b> no cambia con el tiempo.</li>
+<li>Es la única forma de recuperar el acceso a la cuenta si el día de mañana la huella no puede leerse (por ejemplo, cambio de dispositivo, lector dañado, o el usuario ya no coincide con la huella registrada).</li>
+<li>Se muestra una sola vez en este paso. Es responsabilidad de quien se registra anotarlo o guardarlo antes de continuar. Existe un botón &quot;Copiar código&quot; para copiarlo directamente.</li>
+<li>Puede consultarse nuevamente más adelante desde la sección de perfil del usuario, para quien necesite volver a verlo.</li>
+<li><span class="num">5</span>Una vez guardado el código, tocar &quot;Ya lo anoté, entrar&quot; para ingresar a la aplicación.</li>
+</ul>
+<p>Cuando ya se registraron los primeros tres usuarios del sistema, el registro libre se cierra automáticamente por seguridad. A partir del cuarto usuario en adelante, quien quiera registrarse necesita autorización de alguien que ya tenga acceso al sistema. Esto no es una jerarquía fija de un único administrador: cualquier usuario que ya haya sido autorizado a entrar, sin importar si fue de los primeros tres o si entró después con autorización, puede a su vez autorizar a una persona nueva. En la práctica, esto se resuelve con un código de invitación: la persona que ya tiene acceso se lo pasa a la persona nueva, y esta lo escribe en la pantalla de registro para poder crear su cuenta. Sin ese código, un usuario nuevo no puede registrarse por sí solo.</p>
+<figure><img src="img/web_image11.jpg" alt="Pantalla de huella registrada, con el código de recuperación del usuario." loading="lazy"><figcaption>Pantalla de huella registrada, con el código de recuperación del usuario.</figcaption></figure>
+<h3 id="web-2-3">2.3. No se puede ingresar con la huella (recupero de acceso)</h3>
+<p>Esta opción se usa cuando la huella dactilar no funciona o no está disponible.</p>
+<ul>
+<li><span class="num">1</span>Tocar &quot;No puedo entrar con mi huella&quot;.</li>
+<li><span class="num">2</span>Escribir el nombre de usuario.</li>
+<li><span class="num">3</span>Escribir el código de recuperación que se guardó en el paso 2.2 al momento del registro.</li>
+<li><span class="num">4</span>Tocar &quot;Entrar&quot;.</li>
+</ul>
+<p>Si el usuario no conserva su código de recuperación, no va a poder recuperar el acceso por este medio; en ese caso, tiene que gestionar el acceso con quien administre el sistema.</p>
+<figure class="tel"><img src="img/web_image7.jpg" alt="Pantalla de ingreso con código de recuperación y el usuario." loading="lazy"><figcaption>Pantalla de ingreso con código de recuperación y el usuario.</figcaption></figure>
+</section>
+<section id="web-3">
+<h2><span class="n">3</span>Pantalla de Inicio</h2>
+<p>Es la primera pantalla que se ve al ingresar a la aplicación (una vez resuelto el inicio de sesión). Desde acá se accede al resto de las funciones y se ve información general del sistema.</p>
+<figure class="tel"><img src="img/web_image16.jpg" alt="Pantalla de Inicio, con los accesos directos y el dibujo actual." loading="lazy"><figcaption>Pantalla de Inicio, con los accesos directos y el dibujo actual.</figcaption></figure>
+<h3 id="web-3-1">3.1. Información de sesión</h3>
+<p>En la parte superior se muestra el usuario que inició sesión, junto con un botón Salir para cerrar la sesión.</p>
+<h3 id="web-3-2">3.2. Dibujo actual</h3>
+<p>Se informa cuál es el dibujo que está cargado en este momento en el sistema, es decir, el que está asignado al telar para tejer o que se está tejiendo actualmente. Si todavía no se asignó ningún dibujo, el campo indica &quot;Ninguno&quot;.</p>
+<h3 id="web-3-3">3.3. Accesos directos</h3>
+<p>Desde esta pantalla se accede a las otras dos secciones de la aplicación:</p>
+<ul>
+<li><b>Editor de Dibujo:</b> lleva a la pantalla donde se diseña, se edita y se ejecuta la matriz del telar. Se explica en el punto 4.</li>
+<li><b>Biblioteca de Dibujos:</b> lleva al listado completo de todos los dibujos guardados hasta el momento. Se explica en el punto 5.</li>
+</ul>
+<h3 id="web-3-4">3.4. Modo oscuro</h3>
+<p>Un interruptor permite alternar entre el tema visual claro y el oscuro de la aplicación, según la preferencia de quien la esté usando. Este ajuste no afecta ninguna función del sistema, es solamente una cuestión de visualización.</p>
+<figure class="tel"><img src="img/web_image2.jpg" alt="Pantalla de Inicio, con modo oscuro activado." loading="lazy"><figcaption>Pantalla de Inicio, con modo oscuro activado.</figcaption></figure>
+</section>
+<section id="web-4">
+<h2><span class="n">4</span>Pantalla Editor de Dibujo</h2>
+<p>Es la pantalla donde se crea, se edita y se ejecuta la matriz (el &quot;dibujo&quot;) que el telar va a tejer. Es la pantalla central de la aplicación.</p>
+<figure class="tel"><img src="img/web_image5.jpg" alt="Pantalla Editor de Dibujo, con la grilla vacía lista para empezar." loading="lazy"><figcaption>Pantalla Editor de Dibujo, con la grilla vacía lista para empezar.</figcaption></figure>
+<h3 id="web-4-1">4.1. Definir el tamaño de la matriz</h3>
+<ul>
+<li><span class="num">1</span>En los campos correspondientes, escribir la cantidad de filas (&quot;Fil.&quot;) y de columnas (&quot;Col.&quot;) que va a tener la matriz. El sistema admite un mínimo de 2 y un máximo de 32 en cada dimensión.</li>
+<li><span class="num">2</span>Tocar &quot;Aplicar&quot; para que el cambio de tamaño se refleje en la grilla.</li>
+</ul>
+<figure><img src="img/web_image12.jpg" alt="Ilustración del manual" loading="lazy"></figure>
+<p>Si se ingresa un número fuera del rango permitido, el sistema avisa mediante un mensaje y ajusta automáticamente el valor al límite permitido más cercano (por ejemplo, si se ingresa un número mayor a 32, lo deja en 32).</p>
+<h3 id="web-4-2">4.2. Nombrar el dibujo</h3>
+<p>En el campo de texto ubicado sobre la grilla se escribe el nombre con el que va a identificarse el dibujo dentro del sistema. Este nombre es el que después va a aparecer listado en la Biblioteca de Dibujos.</p>
+<figure><img src="img/web_image3.jpg" alt="Al lado del nombre, la aplicación muestra un indicador de estado del dibujo (Nuevo, Modificado, Guardado), que informa si hay cambios sin guardar en ese momento." loading="lazy"><figcaption>Al lado del nombre, la aplicación muestra un indicador de estado del dibujo (Nuevo, Modificado, Guardado), que informa si hay cambios sin guardar en ese momento.</figcaption></figure>
+<h3 id="web-4-3">4.3. Estado real del telar</h3>
+<p>Debajo del nombre del dibujo hay una barra que muestra el estado real del telar, tomado directamente de la base de datos y del equipo de control físico (no es una simulación). Tiene dos indicadores:</p>
+<p>Conexión del equipo de control (ESP32):</p>
+<ul>
+<li><b>Conectado (indicador verde):</b> el equipo de control envió una señal de confirmación (heartbeat) hace menos de 8 segundos. Esto significa que el equipo está encendido, conectado a la red y funcionando con normalidad.</li>
+<li><b>Sin conexión, hace X segundos (indicador ámbar):</b> el equipo de control dejó de enviar señales de confirmación. Puede deberse a que está apagado, desconectado de la red, o tiene algún problema de funcionamiento.</li>
+<li><b>Sin datos del equipo (indicador gris):</b> todavía no llegó ninguna señal de confirmación desde que se creó el registro del telar en el sistema, o el firmware instalado en el equipo es una versión anterior que no envía esta información.</li>
+</ul>
+<p>Estado de tejido:</p>
+<p>Indica si el telar está Tejiendo, Pausado, Detenido o en Error. Este dato proviene directamente de la base de datos del sistema, actualizada por las acciones reales que se ejecutan (ver el punto 4.6), y no de la animación que se ve en pantalla.</p>
+<p>Es fundamental entender la diferencia entre lo que se ve en la animación de la grilla y lo que efectivamente hace la máquina física.</p>
+<figure><img src="img/web_image1.jpg" alt="Ilustración del manual" loading="lazy"></figure>
+<h3 id="web-4-4">4.4. Dibujar la matriz</h3>
+<ul>
+<li>Tocar una celda de la grilla la activa o la desactiva.</li>
+<li>Al activar una celda, se puede indicar además la cantidad de pasadas (repeticiones) que corresponden a esa posición del dibujo.</li>
+</ul>
+<figure><img src="img/web_image10.jpg" alt="Ilustración del manual" loading="lazy"></figure>
+<h3 id="web-4-5">4.5. Herramientas del editor</h3>
+<ul>
+<li><b>Limpiar:</b> borra por completo el contenido de la grilla (todas las celdas activadas vuelven a su estado inicial). El sistema pide confirmación antes de ejecutar esta acción, porque no se puede deshacer.</li>
+<li><b>Simulador de color:</b> permite asignar un color de hilo a toda la matriz, o a una fila puntual, con el fin de visualizar de forma aproximada cómo se va a ver el tejido resultante. Esto es solamente una ayuda visual dentro de la aplicación; no envía ninguna instrucción al telar físico ni influye en la ejecución del tejido.</li>
+</ul>
+<figure><img src="img/web_image15.jpg" alt="Ilustración del manual" loading="lazy"></figure>
+<ul>
+<li><b>Descargar ficha técnica:</b> genera un archivo PDF con el detalle del dibujo actual, para poder imprimirlo o archivarlo como referencia.</li>
+</ul>
+<h3 id="web-4-6">4.6. Controlar la ejecución del tejido: qué hace cada botón realmente</h3>
+<p>Esta es la sección más importante del manual, porque hay una diferencia real entre lo que cada botón parece hacer por su nombre y lo que efectivamente ejecuta hoy en el sistema. Se detalla a continuación el comportamiento exacto de cada uno, tal como está construido actualmente.</p>
+<figure class="tel"><img src="img/web_image14.jpg" alt="Editor con un patrón cargado. Los números dentro de las celdas son las pasadas de cada punto." loading="lazy"><figcaption>Editor con un patrón cargado. Los números dentro de las celdas son las pasadas de cada punto.</figcaption></figure>
+<p>Iniciar (▶):</p>
+<ul>
+<li>Si el dibujo que está cargado en el editor es distinto al que estaba asignado previamente al telar, el sistema asigna este nuevo dibujo, reinicia la posición de tejido al principio (fila 1, columna 1) y actualiza el estado real del telar a &quot;Tejiendo&quot; en la base de datos. Este cambio de estado es detectado por el equipo de control (ESP32), que a su vez acciona el relé conectado en paralelo al botón físico de Marcha del telar, arrancando la máquina real.</li>
+<li>Si el dibujo que está cargado en el editor es el mismo que ya estaba asignado al telar, el sistema no reinicia la posición ni envía una nueva orden de arranque: simplemente retoma la animación en pantalla desde la posición en la que se encontraba.</li>
+</ul>
+<p>Pausa ():</p>
+<ul>
+<li><b>El botón &quot;Detener&quot; fue eliminado de la interfaz:</b> su función la cumple ahora el botón Pausa, que es el único botón real de parada. La función es detener la máquina real. Así es como tiene que funcionar: al tocarlo, el sistema actualiza el estado real del telar en la base de datos, cerrando el registro de producción en curso y llevando el estado a &quot;Detenido&quot;. Ese cambio es detectado por el equipo de control, que acciona el relé conectado en paralelo al botón físico de Pausa del telar, deteniendo la máquina real.</li>
+<li><b>Hoy, tal como está construido, todavía no hace esto:</b> solo pausa la animación que se ve en la pantalla del navegador, sin enviar ninguna orden al backend ni al equipo de control, por lo que el telar físico sigue tejiendo con normalidad aunque en la pantalla la animación esté detenida. Esto queda marcado como tarea pendiente de desarrollo (ver punto 7). Mientras esta corrección no esté hecha, quien use el sistema tiene que saber que pausar en la pantalla no equivale a pausar la máquina.</li>
+<li>Esta implementación (que Pausa accione de verdad el relé del equipo de control) se hace recién cuando se esté trabajando con el hardware conectado al telar real, no antes. Hasta ese momento, no tiene sentido activarla porque no hay equipo físico que responda a esa orden.</li>
+<li>Una consecuencia importante, una vez que Pausa haga la parada real: si después de pausar se quiere retomar el tejido, hay que volver a tocar Iniciar. Como el dibujo queda desasignado al pausar, el sistema lo va a tratar como una asignación nueva: la posición vuelve a empezar desde el principio del dibujo (fila 1, columna 1), no continúa desde el punto exacto en el que se dejó. Esto es así porque, en la etapa actual del proyecto, el sistema controla el arranque y la parada de la máquina, pero todavía no la posición exacta de tejido dentro del mecanismo físico.</li>
+<li>Sobre continuar el tejido exactamente desde la fila donde se dejó: no hace falta que el sistema lo resuelva por software. Eso se maneja directamente en la máquina física con el botón Retroceder de la botonera: es el que permite volver a la posición correcta antes de retomar, por ejemplo después de un hilo cortado, para que el patrón no quede mal. Por eso no importa que la posición vuelva a fila 1 al reasignar el patrón con Iniciar: la posición real de tejido la termina de ajustar el operario con Retroceder en la máquina, no la web.</li>
+</ul>
+<p>Retroceder telar (⏪):</p>
+<ul>
+<li>Acciona el botón físico de Retroceder de la botonera del telar, a través de un relé del ESP32: mueve el mecanismo real de la máquina, no solo la posición registrada en el sistema. Por eso pide confirmación antes de ejecutarse. Se usa para corregir la posición tras un corte de hilo. (El botón anterior &quot;Retroceder fila (↩)&quot;, que solo movía el contador en pantalla sin tocar la máquina, se eliminó: no tenía uso real y se prestaba a confusión con este.)</li>
+</ul>
+<figure><img src="img/web_image6.jpg" alt="Barra de controles: Pausa (⏸), Iniciar (▶) y Retroceder telar (⏪)." loading="lazy"><figcaption>Barra de controles: Pausa (⏸), Iniciar (▶) y Retroceder telar (⏪).</figcaption></figure>
+<p>Indicador &quot;Posición incierta&quot;:</p>
+<ul>
+<li>Aparece en la barra de estado del editor cuando el ESP32 detecta que alguien usó a mano los botones Avanzar o Impulso del telar. Esos dos botones no se controlan desde la web (siguen siendo manuales), pero sí se sensan: como el sensor de pasada no distingue en qué sentido se movió la máquina, un uso manual puede desincronizar la posición registrada. El aviso queda visible hasta que alguien mira el telar, verifica dónde está parado realmente y toca &quot;Confirmar&quot;.</li>
+</ul>
+<p>Mientras el telar está en ejecución (Tejiendo), la matriz queda bloqueada para edición: no pueden modificarse el tamaño, los colores ni las pasadas hasta detener el tejido.</p>
+<h3 id="web-4-7">4.7. Guardar y crear dibujos</h3>
+<ul>
+<li><b>Nuevo:</b> descarta el dibujo que está actualmente en el editor y abre uno en blanco. Si el dibujo actual tiene cambios sin guardar, el sistema pide confirmación antes de descartarlos.</li>
+</ul>
+<figure><img src="img/web_image8.jpg" alt="Ilustración del manual" loading="lazy"></figure>
+<ul>
+<li><b>Guardar:</b> guarda el dibujo actual, con el nombre asignado, en la Biblioteca de Dibujos, para que quede disponible para su uso posterior.</li>
+</ul>
+<figure><img src="img/web_image9.jpg" alt="Ilustración del manual" loading="lazy"></figure>
+</section>
+<section id="web-5">
+<h2><span class="n">5</span>Pantalla Biblioteca de Dibujos</h2>
+<p>En esta pantalla se listan todos los dibujos guardados hasta el momento en el sistema.</p>
+<figure class="tel"><img src="img/web_image13.jpg" alt="Pantalla Biblioteca, con los dibujos guardados, el buscador de dibujos y la posibilidad de borrar, cargar y generar un nuevo dibujo." loading="lazy"><figcaption>Pantalla Biblioteca, con los dibujos guardados, el buscador de dibujos y la posibilidad de borrar, cargar y generar un nuevo dibujo.</figcaption></figure>
+<ul>
+<li><span class="num">1</span>En la parte superior se muestra la cantidad total de dibujos guardados.</li>
+<li><span class="num">2</span>Se puede buscar un dibujo puntual escribiendo su nombre en la barra de búsqueda. El listado se filtra automáticamente a medida que se escribe.</li>
+<li><span class="num">3</span>El botón &quot;Limpiar&quot; borra el texto de búsqueda y vuelve a mostrar el listado completo.</li>
+<li><span class="num">4</span>El botón &quot;Nuevo&quot; lleva directamente a la pantalla del Editor con un dibujo en blanco, para crear uno nuevo.</li>
+<li><span class="num">5</span>Al tocar un dibujo de la lista se accede a las opciones de editarlo (lo abre en el Editor) o eliminarlo de forma definitiva.</li>
+<li><span class="num">6</span>Si todavía no hay ningún dibujo guardado, la pantalla muestra un mensaje indicando que hay que crear el primero desde el Editor.</li>
+</ul>
+</section>
+<section id="web-6">
+<h2><span class="n">6</span>Sobre los usuarios del sistema</h2>
+<p>El sistema no tiene distintos niveles de permiso entre usuarios: todo usuario que inicia sesión tiene acceso a las mismas funciones (crear, editar y eliminar dibujos, e iniciar o detener el tejido). No existe hoy una distinción entre, por ejemplo, un perfil de operario y uno de supervisor.</p>
+<p>El único control de acceso que existe es el que se explicó en el punto 2.2: los primeros tres usuarios pueden registrarse libremente, y a partir del cuarto en adelante hace falta que alguien que ya tenga una cuenta le dé un código de invitación a la persona nueva. Esa capacidad de dar acceso no queda reservada solo para los primeros tres: se traspasa a cada usuario nuevo que se registra con autorización, así que cualquiera que ya esté adentro puede dejar entrar a otro. Esto es exclusivamente una medida para evitar registros no autorizados, no una jerarquía de permisos dentro del sistema.</p>
+</section>
+<section id="web-7">
+<h2><span class="n">7</span>Pendientes para la versión final del manual</h2>
+<p>Fin del contenido del Manual 1 (página web). El Manual 2, sobre el uso del telar físico en la fábrica y la modificación incorporada, se desarrolla por separado.</p>
+</section>
+</div>
+
+<div class="pane oculto" data-pane="fab">
+<p><b>Este es el contenido para el segundo manual:</b> cómo se usa el telar en la planta, y cómo se usa con la modificación que le estamos agregando (control remoto de arranque y parada mediante el ESP32, con la idea de más adelante controlar también el patrón). Como en el manual de la página web, acá va el contenido; el diseño final del manual lo arma otra persona.</p>
+<p><b>Estado de este documento:</b> las secciones 2, 3 y 4 están completas, con las fotos del relevamiento presencial del 19/08/2026 incorporadas. Lo único que queda pendiente es lo del Nivel 2 (sección 3.2), que todavía no está instalado en la máquina.</p>
+<section id="fab-1">
+<h2><span class="n">1</span>Introducción</h2>
+<p>El telar que estamos modificando es una máquina de tejido plano que hoy funciona de forma totalmente mecánica: se enciende y se para con una botonera física, y el patrón que teje lo define una cinta de papel perforada que se va leyendo mecánicamente mientras la máquina trabaja.</p>
+<p>Lo que estamos agregando no cambia nada del funcionamiento original de la máquina. Se conecta en paralelo a los controles que ya existen, así que el telar se puede seguir usando exactamente igual que siempre, de forma manual, en cualquier momento.</p>
+</section>
+<section id="fab-2">
+<h2><span class="n">2</span>Qué telar es y cómo funciona</h2>
+<h3 id="fab-2-1">2.1. El sistema de tejido</h3>
+<p>Los telares que tejen con patrón (no tela lisa) necesitan definir, en cada pasada, qué hilos de la urdimbre suben y cuáles quedan abajo. Eso es lo que forma el dibujo en la tela. Hay dos formas típicas de resolver esto:</p>
+<p><b>Jacquard hilo por hilo:</b> cada hilo tiene su propio control individual, tradicionalmente con tarjetas perforadas (una tarjeta por pasada, con un agujero por cada hilo que hay que levantar). Permite patrones muy detallados, pero implica manejar cientos o miles de puntos de control.</p>
+<p><b>Por marcos (dobby):</b> en vez de controlar cada hilo por separado, se agrupan en una cantidad chica de marcos, y en cada pasada se decide qué marcos suben. Todos los hilos de un mismo marco se mueven juntos. Es mucho más simple porque trabaja con pocos puntos de control (8 en el caso de nuestra máquina), y alcanza perfectamente para patrones repetitivos.</p>
+<p>Cuando inspeccionamos el telar de la planta confirmamos, por su placa de datos, que es un Vamatex modelo C 201 (matrícula 1104, año de revisión 1989). La lectura del patrón se hace con una cinta de papel angosta montada en un tambor con rueda dentada, que acciona una fila de palancas de selección. El máximo de matrices que la máquina puede ejecutar en simultáneo es 8. Con eso queda claro que es un telar por marcos (dobby), no un Jacquard hilo por hilo.</p>
+<figure><img src="img/fab_image1.jpg" alt="Placa de datos de la máquina: Vamatex, modelo C 201, matrícula 1104, año de revisión 1989." loading="lazy"><figcaption>Placa de datos de la máquina: Vamatex, modelo C 201, matrícula 1104, año de revisión 1989.</figcaption></figure>
+<figure class="tel"><img src="img/fab_image4.jpg" alt="Tambor con la cinta de papel perforada: es lo que hoy define el dibujo, pasada por pasada." loading="lazy"><figcaption>Tambor con la cinta de papel perforada: es lo que hoy define el dibujo, pasada por pasada.</figcaption></figure>
+<p>En criollo: es un telar de patrones, de la familia de los &quot;Jacquard&quot; en sentido amplio, pero con un mecanismo de lectura más simple, que trabaja por grupos de hilos en vez de hilo por hilo. Esto no es un detalle menor: es justamente lo que hace posible la modificación que estamos haciendo. Reemplazar la lectura de un puñado de marcos con electrónica es un proyecto que se puede hacer con lo que tenemos; reemplazar el control de cientos de hilos individuales no.</p>
+<h3 id="fab-2-2">2.2. Dos funciones separadas en el telar</h3>
+<p>Para entender la modificación conviene separar el telar en dos partes que hoy trabajan por separado:</p>
+<p>La parte que mueve la máquina. Es la que arranca, avanza, retrocede y para el telar. Se maneja con la botonera física, con los botones de Marcha, Retroceder y Pausa.</p>
+<p>La parte que lee el patrón. Es la que decide, pasada por pasada, qué marcos suben para formar el dibujo. Hoy esto lo hace la cinta de papel perforada que describimos arriba — es mecánico, no tiene nada de electrónico.</p>
+</section>
+<section id="fab-3">
+<h2><span class="n">3</span>La modificación que le estamos haciendo al telar</h2>
+<h3 id="fab-3-1">3.1. Lo que ya está hecho (Nivel 1)</h3>
+<p>Lo primero que hicimos, y que ya está andando, actúa solo sobre la parte que mueve la máquina (punto 2.2, ítem 1). Es un ESP32 conectado en paralelo a los botones físicos de Marcha, Pausa y Retroceder, mediante tres relés.</p>
+<p>Con esto, desde la página web (ver el otro manual) se puede:</p>
+<p>Poner en marcha el telar sin estar parado frente a la botonera.</p>
+<p>Detenerlo de la misma forma, a distancia (botón Pausa).</p>
+<p><b>Ver reflejado en la web lo que se hace desde la botonera:</b> si un operario aprieta Marcha, Pausa o Retroceder en la máquina, el ESP32 lo detecta y la página se actualiza sola.</p>
+<p>Algo importante: este agregado no reemplaza la botonera, ni toca ninguna otra parte de la máquina. Lo único que hace es &quot;apretar&quot; los mismos botones que apretaría un operario, pero desde otro lado. Por eso la botonera física sigue funcionando siempre igual que antes, de forma totalmente independiente del sistema electrónico. Si el ESP32 se desconecta, se apaga o falla, el telar se sigue manejando con la botonera de toda la vida, sin ningún problema.</p>
+<h3 id="fab-3-2">3.2. Lo que viene después (Nivel 2 — todavía no está instalado)</h3>
+<p>El siguiente paso, ya pensado pero todavía no puesto en la máquina, es meternos también con la parte que lee el patrón (punto 2.2, ítem 2). La idea es reemplazar la lectura de la cinta de papel perforada comandando las bobinas de selección que el telar ya tiene instaladas, mediante relés de estado sólido manejados por el mismo ESP32, que a su vez recibiría el patrón desde la página web.</p>
+<p><b>Esto todavía no funciona sobre el telar real:</b> está en etapa de diseño, medición y prueba de banco. Vamos a actualizar este manual cuando esté instalado y probado en la máquina.</p>
+</section>
+<section id="fab-4">
+<h2><span class="n">4</span>Uso del telar — paso a paso</h2>
+<p>Esta sección describe el uso del telar paso a paso, con las partes identificadas en el relevamiento presencial del 19/08/2026.</p>
+<h3 id="fab-4-1">4.1. Partes de la máquina</h3>
+<p><b>Marca y modelo:</b> Vamatex C 201 (Italia), matrícula 1104, año de revisión 1989. En el mismo taller hay otra máquina distinta, un Vamatex Propeller C 401: no confundirlas.</p>
+<p><b>Urdimbre:</b> los hilos tensados verticalmente que forman la base del tejido.</p>
+<p><b>Lizos y peine:</b> separan y guían los hilos de la urdimbre.</p>
+<p><b>Caja de selección de marcos:</b> donde está la cinta perforada que hoy decide qué marcos suben en cada pasada (punto 2.1).</p>
+<p><b>Botonera física:</b> cinco pulsadores repartidos en dos tableros separados a lo largo de la máquina (ver 4.2).</p>
+<p>ESP32 instalado en paralelo a la botonera (la modificación del punto 3.1).</p>
+<figure><img src="img/fab_image2.jpg" alt="Vista general del telar Vamatex C 201 en la planta." loading="lazy"><figcaption>Vista general del telar Vamatex C 201 en la planta.</figcaption></figure>
+<figure><img src="img/fab_image5.jpg" alt="Urdimbre, lizos y peine vistos desde el frente de la máquina." loading="lazy"><figcaption>Urdimbre, lizos y peine vistos desde el frente de la máquina.</figcaption></figure>
+<figure class="tel"><img src="img/fab_image3.jpg" alt="Caja de selección de marcos: las palancas que definen qué marcos suben en cada pasada." loading="lazy"><figcaption>Caja de selección de marcos: las palancas que definen qué marcos suben en cada pasada.</figcaption></figure>
+<h3 id="fab-4-2">4.2. Puesta en marcha</h3>
+<p>La botonera de nuestro telar tiene cinco pulsadores, repartidos en dos tableros separados sobre la barra frontal de la máquina. Las etiquetas están en italiano e inglés, como vino de fábrica:
+
+• Tablero principal (tres botones): &quot;Avviamento / Start&quot; es Marcha; &quot;Stop&quot; es Pausa; y &quot;Marcia Discontinua / Discontinuing Functionment&quot; es el que llamamos Impulso, que mueve la máquina de a saltos en vez de en marcha continua.
+• Tablero secundario (dos botones): &quot;Avanti / Advance&quot; es Avanzar e &quot;Indietro / Returne&quot; es Retroceder.
+
+No es el panel completo con microprocesador de los modelos más nuevos de Vamatex (el manual oficial del fabricante, citado como referencia general, describe paneles con más botones y funciones): la nuestra es una versión más simple, de accionamiento directo.</p>
+<figure><img src="img/fab_image7.jpg" alt="Tablero principal: &quot;Marcia Discontinua&quot; (Impulso), &quot;Stop&quot; (Pausa) y &quot;Avviamento / Start&quot; (Marcha)." loading="lazy"><figcaption>Tablero principal: &quot;Marcia Discontinua&quot; (Impulso), &quot;Stop&quot; (Pausa) y &quot;Avviamento / Start&quot; (Marcha).</figcaption></figure>
+<figure><img src="img/fab_image6.jpg" alt="Tablero secundario: &quot;Avanti / Advance&quot; (Avanzar) e &quot;Indietro / Returne&quot; (Retroceder)." loading="lazy"><figcaption>Tablero secundario: &quot;Avanti / Advance&quot; (Avanzar) e &quot;Indietro / Returne&quot; (Retroceder).</figcaption></figure>
+<p>Antes de arrancar, se revisa que no haya nadie cerca de la zona de riesgo, que no queden herramientas u objetos sueltos sobre la máquina, y que las protecciones y tapas estén cerradas y en su lugar.</p>
+<p>Para poner el telar a tejer, se aprieta el botón de Marcha. No hay ningún paso adicional puntual de nuestra máquina o de la modificación que agregamos: la revisión visual general (punto anterior) es lo único que se hace antes de arrancar.</p>
+<p><b>El botón de Retroceder se usa cuando se corta el hilo:</b> sirve para volver atrás y que el patrón no se eche a perder (si no se retrocede, el patrón del rollo termina distinto al pedido). Se explica en más detalle en el punto 4.5.</p>
+<p>Una vez en marcha, conviene quedarse un momento verificando que no salga ningún ruido extraño. Si aparece algo raro, se para con el botón de Pausa (o desde la app, ver más abajo) y se busca la causa (ver punto 4.5).</p>
+<h3 id="fab-4-3">4.3. Operación normal</h3>
+<p>Mientras el telar está tejiendo, el operario se encarga de:</p>
+<p>Colocación de los rollos. Los rollos van en el portarrollos, en el lugar donde se conecta cualquier rollo en este tipo de telar (la zona de la urdimbre, ver punto 2.1).</p>
+<p>Revisión. No hay un tiempo fijo establecido para revisar los rollos. El operario le va echando una mirada al telar cada tanto mientras está trabajando, y así controla que todo esté en orden.</p>
+<p>Situaciones a vigilar. El telar es una máquina grande y hace ruido de forma normal mientras trabaja; eso no es una falla, es su funcionamiento habitual. Desde que está en marcha, no se registró ningún ruido fuera de lo normal ni ningún atasco. La única situación que efectivamente ocurre, y por la que se para el telar, es el hilo cortado, que pasa cada cierto tiempo. Se explica el procedimiento en el punto 4.5.</p>
+<h3 id="fab-4-4">4.4. Detención y parada</h3>
+<p>Con nuestra botonera (Marcha, Retroceder, Pausa), el botón de Pausa es el que se usa para parar el telar, tanto al terminar la tarea como ante cualquier problema que surja mientras está tejiendo (hilo cortado, ruido raro, etc.). Confirmado con la máquina real: no hay ningún otro botón además de estos tres, así que no existe un botón de emergencia separado.</p>
+<p>El manual oficial de Vamatex, como referencia general para esta familia de telares, describe además un botón de emergencia específico, de color rojo, pensado para cortar todo de forma inmediata ante un peligro real. Ya confirmamos con el dueño de la fábrica (visita del 19/08/2026) que el botón de Pausa (Stop) de nuestra máquina se usa en la práctica como una parada normal: no tiene mecanismo de enclavamiento ni procedimiento especial de rearme, y para retomar simplemente se aprieta Marcha de nuevo. No cumple, entonces, la función de un botón de emergencia con corte inmediato — si en algún momento se necesita esa función, habría que agregar un mecanismo aparte.</p>
+<p>Sea cual sea el motivo de la parada, antes de volver a arrancar conviene asegurarse de que el problema que la originó ya esté resuelto.</p>
+<h3 id="fab-4-5">4.5. Situaciones de error o emergencia</h3>
+<p>El único caso por el que se para el telar es el hilo cortado. El procedimiento es el siguiente:</p>
+<p>El operario detiene el telar desde la aplicación (la web, ver el manual de la página web, punto 4.6).</p>
+<p>Saca el hilo cortado.</p>
+<p>Si todavía queda hilo en el rollo, toma el hilo del mismo rollo y lo prepara de nuevo, dejándolo listo para retomar.</p>
+<p>Usa el botón de Retroceder para volver el telar a una posición anterior antes de arrancar de nuevo. Esto es importante: si no se retrocede, el patrón que se está tejiendo queda mal — no coincide con el patrón pedido.</p>
+<p>Una vez retrocedido y con el hilo preparado, se arranca de nuevo con Marcha.</p>
+<p><b>Sobre el ruido de la máquina:</b> al ser un telar grande, hace ruido de forma normal mientras trabaja, y eso no es motivo de alarma. No se registraron ruidos fuera de lo normal desde que está en marcha, así que no hay, por ahora, un procedimiento aparte para eso. Del mismo modo, no se registraron atascos.</p>
+<figure><img src="img/fab_image9.jpg" alt="Tela ya tejida saliendo por el peine." loading="lazy"><figcaption>Tela ya tejida saliendo por el peine.</figcaption></figure>
+<p>Como criterio general de seguridad (esto es válido más allá de los casos puntuales de arriba): nunca hay que tocar partes en movimiento del telar, ni sacar ninguna protección o tapa, mientras la máquina está funcionando. Cualquier intervención manual se hace con el telar parado.</p>
+<p>Nuestro telar, al tener el sistema de arranque y parada remotos por el ESP32, agrega una posibilidad más: se puede detener la máquina también desde la página web (ver el manual de la página web, punto 4.6), sin tener que estar físicamente al lado de la botonera. Como se explicó en el punto 4.4, Pausa es el botón que usamos hoy para parar la máquina en cualquier circunstancia; si además cumple la función de un botón de emergencia es algo que todavía estamos revisando (ver punto 5).</p>
+</section>
+<section id="fab-5">
+<h2><span class="n">5</span>Puntos pendientes</h2>
+<p>Queda por definir cómo se comporta exactamente el botón de Retroceder al accionarlo: si la máquina retrocede de forma continua mientras se lo mantiene apretado, o si un toque produce un movimiento fijo. Es un dato que hay que observar en la máquina en marcha, y de él depende cómo se configura el botón equivalente de la página web.</p>
+<p>Con esto, el punto 4 (uso paso a paso del telar) queda desarrollado en su totalidad, salvo ese punto pendiente.</p>
+<figure class="tel"><img src="img/fab_image8.jpg" alt="Tablero eléctrico principal de la máquina." loading="lazy"><figcaption>Tablero eléctrico principal de la máquina.</figcaption></figure>
+<p>Fin del contenido actual. Se va completando a medida que definamos lo que falta.</p>
+</section>
+</div>
+
+<div class="creditos">
+    <div class="t">Control de Inserción de Trama · Manuales de uso</div>
+    <div class="l"><b>Caso:</b> Norberto Ferrando, fábrica textil (Caseros) · Telar Vamatex C 201.<br>
+    Evaluación de Proyectos · 7mo Informática 2026 · Instituto Leonardo Murialdo.<br>
+    Prof. Pedaci, Lourdes</div>
+    <div class="enlaces">
+      <a href="https://manfredojuanignacio08-prog.github.io/Landing_Page_CIT/" target="_blank" rel="noopener">Landing del proyecto</a>
+      <a href="https://github.com/manfredojuanignacio08-prog/control_insercion_trama" target="_blank" rel="noopener">Repositorio</a>
+      <a href="../web_doc/index.html">Carpeta del Proyecto</a>
+    </div>
+  </div>
+</main>
+
+<footer>Manuales generados a partir de la documentación del proyecto · Última revisión: septiembre de 2026</footer>
+<div class="lb" id="lb"><span class="x">&times;</span><img id="lbimg" alt=""><div class="cap" id="lbcap"></div></div>
+<button class="arriba" id="arriba" aria-label="Volver arriba">↑</button>
+<script src="app.js"></script>
+</body>
+</html>
