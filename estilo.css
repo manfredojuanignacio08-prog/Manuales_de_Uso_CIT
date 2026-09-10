@@ -283,8 +283,6 @@ li:has(.num)::before{display:none}
 }
 
 /* el título de la barra, más contenido */
-.sb-h h1{font-size:1.45rem;line-height:1.15}
-.sb-h p{font-size:.78rem;line-height:1.45}
 
 /* capturas de celular: acotadas para que no ocupen toda la columna */
 figure img{max-width:100%;height:auto}
@@ -294,10 +292,6 @@ figure{margin:1.8rem 0;text-align:center}
 figure figcaption{margin-top:.6rem}
 
 /* ---------- título de la barra ---------- */
-.sb-h{padding:1.4rem 1.2rem 1.1rem}
-.sb-h h1{font-size:1.32rem;line-height:1.2;margin:0 0 .35rem;letter-spacing:-.01em}
-.sb-h p{font-size:.76rem;line-height:1.5;color:var(--gray-lt);margin:0;text-align:left;
-  text-wrap:pretty;hyphens:none}
 
 /* ---------- grupos plegables del índice ---------- */
 .ngrupo{display:flex;align-items:stretch;gap:.2rem}
