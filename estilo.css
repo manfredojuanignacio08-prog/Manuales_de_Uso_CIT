@@ -427,3 +427,9 @@ pre{overflow-x:auto}
 .gb-a a:hover{background:var(--rose);color:var(--cream);border-color:var(--rose)}
 .gb-a a.pri:hover{background:var(--rose-md)}
 @media(max-width:700px){ .gb-a{width:100%} .gb-a a{justify-content:center} }
+
+/* ---------- en celular el botón del menú no debe tapar el título ---------- */
+@media(max-width:900px){
+  .sb-top{padding-top:3.6rem}
+  .sb.open .mtoggle,.mtoggle{box-shadow:0 2px 10px rgba(30,58,95,.22)}
+}

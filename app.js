@@ -30,9 +30,9 @@ tabs.forEach(t => t.addEventListener('click', () => mostrar(t.dataset.pane)));
 /* ---------- menú lateral en pantallas chicas ---------- */
 const sb = document.getElementById('sb');
 const mt = document.getElementById('mt');
-if (mt) mt.addEventListener('click', () => sb.classList.toggle('abierta'));
+if (mt) mt.addEventListener('click', () => sb.classList.toggle('open'));
 document.querySelectorAll('#nav a').forEach(a => {
-  a.addEventListener('click', () => sb.classList.remove('abierta'));
+  a.addEventListener('click', () => sb.classList.remove('open'));
 });
 
 /* ---------- resaltar la sección visible ---------- */
