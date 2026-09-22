@@ -45,7 +45,7 @@
 <a href="#web-4-7" class="n1" data-pad="4">4.7 · Guardar y crear dibujos</a>
 <div class="ngrupo"><a href="#web-5" class="n0">5 · Pantalla Biblioteca de Dibujos</a></div>
 <div class="ngrupo"><a href="#web-6" class="n0">6 · Sobre los usuarios del sistema</a></div>
-<div class="ngrupo"><a href="#web-7" class="n0">7 · Pendientes para la versión final del manual</a></div>
+<div class="ngrupo"><a href="#web-7" class="n0">7 · Preguntas frecuentes</a></div>
 </div>
 <div class="nav-pane oculto" data-pane="fab">
 <div class="ngrupo"><a href="#fab-1" class="n0">1 · Introducción</a></div>
@@ -61,7 +61,7 @@
 <a href="#fab-4-3" class="n1" data-pad="4">4.3 · Operación normal</a>
 <a href="#fab-4-4" class="n1" data-pad="4">4.4 · Detención y parada</a>
 <a href="#fab-4-5" class="n1" data-pad="4">4.5 · Situaciones de error o emergencia</a>
-<div class="ngrupo"><a href="#fab-5" class="n0">5 · Puntos pendientes</a></div>
+<div class="ngrupo"><a href="#fab-5" class="n0">5 · Preguntas frecuentes</a></div>
 </div>
 </nav>
 </aside>
@@ -255,8 +255,9 @@
 <p>El único control de acceso que existe es el que se explicó en el punto 2.2: los primeros tres usuarios pueden registrarse libremente, y a partir del cuarto en adelante hace falta que alguien que ya tenga una cuenta le dé un código de invitación a la persona nueva. Esa capacidad de dar acceso no queda reservada solo para los primeros tres: se traspasa a cada usuario nuevo que se registra con autorización, así que cualquiera que ya esté adentro puede dejar entrar a otro. Esto es exclusivamente una medida para evitar registros no autorizados, no una jerarquía de permisos dentro del sistema.</p>
 </section>
 <section id="web-7">
-<h2><span class="n">7</span>Pendientes para la versión final del manual</h2>
-<p>Fin del contenido del Manual 1 (página web). El Manual 2, sobre el uso del telar físico en la fábrica y la modificación incorporada, se desarrolla por separado.</p>
+<h2><span class="n">7</span>Preguntas frecuentes</h2>
+<p>Las dudas que más aparecieron sobre el uso de la aplicación, con la respuesta que quedó documentada.</p>
+<details><summary>¿Qué pasa si se corta Internet mientras el telar está tejiendo?</summary><div class="bd">Nada peligroso. El firmware está diseñado como <em>fail-safe</em>: si no puede comunicarse con el backend, no acciona ningún relé. El telar permanece en el estado en que estaba y la botonera física sigue funcionando con normalidad. Cuando la red se restablece, el sistema se sincroniza sin ejecutar órdenes acumuladas.</div></details><details><summary>¿Por qué una fila del dibujo es una pasada y no una celda?</summary><div class="bd">Porque así funciona la máquina. En cada pasada el telar inserta un hilo de trama a lo ancho de toda la tela, y en ese mismo instante se activan todos los elementos de selección que correspondan. Las columnas de una fila son simultáneas, no sucesivas. Para repetir una pasada se dibuja la misma fila dos veces.</div></details><details><summary>¿Se guarda mi huella dactilar en algún servidor?</summary><div class="bd">No. El sistema usa el estándar WebAuthn: el dispositivo genera un par de llaves y la privada nunca sale del hardware del teléfono. Al servidor solo viaja la llave pública, que sirve para verificar una firma pero no permite reconstruir la huella. Si se perdiera la base de datos, no habría ninguna huella que filtrar.</div></details>
 </section>
 </div>
 
@@ -342,13 +343,12 @@ No es el panel completo con microprocesador de los modelos más nuevos de Vamate
 <figure><img src="img/fab_image9.jpg" alt="Tela ya tejida saliendo por el peine." loading="lazy"><figcaption>Tela ya tejida saliendo por el peine.</figcaption></figure>
 <p>Como criterio general de seguridad (esto es válido más allá de los casos puntuales de arriba): nunca hay que tocar partes en movimiento del telar, ni sacar ninguna protección o tapa, mientras la máquina está funcionando. Cualquier intervención manual se hace con el telar parado.</p>
 <p>Nuestro telar, al tener el sistema de arranque y parada remotos por el ESP32, agrega una posibilidad más: se puede detener la máquina también desde la página web (ver el manual de la página web, punto 4.6), sin tener que estar físicamente al lado de la botonera. Como se explicó en el punto 4.4, Pausa es el botón que usamos hoy para parar la máquina en cualquier circunstancia; si además cumple la función de un botón de emergencia es algo que todavía estamos revisando (ver punto 5).</p>
+<figure class="tel"><img src="img/fab_image8.jpg" alt="Tablero eléctrico principal de la máquina." loading="lazy"><figcaption>Tablero eléctrico principal de la máquina.</figcaption></figure>
 </section>
 <section id="fab-5">
-<h2><span class="n">5</span>Puntos pendientes</h2>
-<p>Queda por definir cómo se comporta exactamente el botón de Retroceder al accionarlo: si la máquina retrocede de forma continua mientras se lo mantiene apretado, o si un toque produce un movimiento fijo. Es un dato que hay que observar en la máquina en marcha, y de él depende cómo se configura el botón equivalente de la página web.</p>
-<p>Con esto, el punto 4 (uso paso a paso del telar) queda desarrollado en su totalidad, salvo ese punto pendiente.</p>
-<figure class="tel"><img src="img/fab_image8.jpg" alt="Tablero eléctrico principal de la máquina." loading="lazy"><figcaption>Tablero eléctrico principal de la máquina.</figcaption></figure>
-<p>Fin del contenido actual. Se va completando a medida que definamos lo que falta.</p>
+<h2><span class="n">5</span>Preguntas frecuentes</h2>
+<p>Las dudas que más aparecieron sobre la máquina y la modificación incorporada, con la respuesta que quedó documentada.</p>
+<details><summary>¿El operario puede seguir usando el telar a mano?</summary><div class="bd">Sí, en todo momento. El sistema se conecta <b>en paralelo</b> a la botonera mediante contactos secos: no interrumpe ni reemplaza ningún circuito existente. Si alguien aprieta Marcha en la máquina, el telar arranca igual, y el nodo lo detecta por su etapa de sensado y lo refleja en la aplicación.</div></details><details><summary>¿Por qué un relé PhotoMOS y no uno común o un SSR de triac?</summary><div class="bd">Por la velocidad y por la corriente. A 300 pasadas por minuto son 144.000 conmutaciones por turno, y un relé electromecánico está especificado para unas 100.000 operaciones: se gastaría en una jornada. Un SSR de triac tampoco sirve, porque necesita 0,1 A de corriente mínima para mantenerse encendido y la señal del lector óptico maneja unos pocos miliamperes. El PhotoMOS no tiene corriente mínima y su fuga en apagado se mide en nanoamperes.</div></details><details><summary>¿Cuándo se va a poder parar el telar automáticamente al terminar la pieza?</summary><div class="bd">Cuando el sensor de pasada esté instalado y su conteo validado contra el contador mecánico del telar durante una jornada completa. Construir esa función sobre un número estimado por tiempo sería la forma más rápida de arruinar una pieza de tela. Con el sensor validado, la parada automática es una condición en el firmware y un campo en la base de datos.</div></details><details><summary>¿Qué hace exactamente el botón Retroceder?</summary><div class="bd">Cada toque hace retroceder la máquina <b>una pasada completa</b>, que es lo que se necesita tras una rotura de hilo para no dejar una marca en la tela. Si se quiere volver varias pasadas, se lo toca varias veces. El sistema acompaña el movimiento: cuando detecta un retroceso, sea desde la aplicación o desde la botonera, descuenta esa pasada del conteo y vuelve una fila atrás en el dibujo, de modo que la pasada siguiente repite exactamente la que se deshizo.</div></details>
 </section>
 </div>
 
