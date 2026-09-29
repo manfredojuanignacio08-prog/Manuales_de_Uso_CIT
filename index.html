@@ -20,22 +20,22 @@
     <div class="s">Manuales de uso · 7mo Informática 2026</div>
   </div>
   <div class="sb-acc">
-    <button class="tema" id="tema" aria-label="Cambiar tema"><span id="tema-ico">◐</span><span id="tema-txt">Modo oscuro</span></button>
+    <button type="button" class="tema" id="tema" aria-label="Cambiar tema"><span id="tema-ico">◐</span><span id="tema-txt">Modo oscuro</span></button>
   </div>
   <div class="sb-find"><input type="search" id="buscar" placeholder="Buscar en el índice…" autocomplete="off"></div>
   <nav id="nav">
     <div class="nav-pane" data-pane="web">
 <div class="ngrupo"><a href="#web-1" class="n0">1 · Qué es esta aplicación</a></div>
-<div class="ngrupo"><a href="#web-2" class="n0">2 · Ingresar a la aplicación (inicio de sesión)</a><button class="plg" aria-label="Plegar" data-num="2"></button></div>
+<div class="ngrupo"><a href="#web-2" class="n0">2 · Ingresar a la aplicación (inicio de sesión)</a><button type="button" class="plg" aria-label="Plegar" data-num="2"></button></div>
 <a href="#web-2-1" class="n1" data-pad="2">2.1 · Ingresar con huella dactilar (usuario ya registrado)</a>
 <a href="#web-2-2" class="n1" data-pad="2">2.2 · Registrar la huella dactilar por primera vez</a>
 <a href="#web-2-3" class="n1" data-pad="2">2.3 · No se puede ingresar con la huella (recupero de acceso)</a>
-<div class="ngrupo"><a href="#web-3" class="n0">3 · Pantalla de Inicio</a><button class="plg" aria-label="Plegar" data-num="3"></button></div>
+<div class="ngrupo"><a href="#web-3" class="n0">3 · Pantalla de Inicio</a><button type="button" class="plg" aria-label="Plegar" data-num="3"></button></div>
 <a href="#web-3-1" class="n1" data-pad="3">3.1 · Información de sesión</a>
 <a href="#web-3-2" class="n1" data-pad="3">3.2 · Dibujo actual</a>
 <a href="#web-3-3" class="n1" data-pad="3">3.3 · Accesos directos</a>
 <a href="#web-3-4" class="n1" data-pad="3">3.4 · Modo oscuro</a>
-<div class="ngrupo"><a href="#web-4" class="n0">4 · Pantalla Editor de Dibujo</a><button class="plg" aria-label="Plegar" data-num="4"></button></div>
+<div class="ngrupo"><a href="#web-4" class="n0">4 · Pantalla Editor de Dibujo</a><button type="button" class="plg" aria-label="Plegar" data-num="4"></button></div>
 <a href="#web-4-1" class="n1" data-pad="4">4.1 · Definir el tamaño de la matriz</a>
 <a href="#web-4-2" class="n1" data-pad="4">4.2 · Nombrar el dibujo</a>
 <a href="#web-4-3" class="n1" data-pad="4">4.3 · Estado real del telar</a>
@@ -49,13 +49,13 @@
 </div>
 <div class="nav-pane oculto" data-pane="fab">
 <div class="ngrupo"><a href="#fab-1" class="n0">1 · Introducción</a></div>
-<div class="ngrupo"><a href="#fab-2" class="n0">2 · Qué telar es y cómo funciona</a><button class="plg" aria-label="Plegar" data-num="2"></button></div>
+<div class="ngrupo"><a href="#fab-2" class="n0">2 · Qué telar es y cómo funciona</a><button type="button" class="plg" aria-label="Plegar" data-num="2"></button></div>
 <a href="#fab-2-1" class="n1" data-pad="2">2.1 · El sistema de tejido</a>
 <a href="#fab-2-2" class="n1" data-pad="2">2.2 · Dos funciones separadas en el telar</a>
-<div class="ngrupo"><a href="#fab-3" class="n0">3 · La modificación que le estamos haciendo al telar</a><button class="plg" aria-label="Plegar" data-num="3"></button></div>
+<div class="ngrupo"><a href="#fab-3" class="n0">3 · La modificación que le estamos haciendo al telar</a><button type="button" class="plg" aria-label="Plegar" data-num="3"></button></div>
 <a href="#fab-3-1" class="n1" data-pad="3">3.1 · Lo que ya está hecho (Nivel 1)</a>
 <a href="#fab-3-2" class="n1" data-pad="3">3.2 · Lo que viene después (Nivel 2, todavía no está instalado)</a>
-<div class="ngrupo"><a href="#fab-4" class="n0">4 · Uso del telar, paso a paso</a><button class="plg" aria-label="Plegar" data-num="4"></button></div>
+<div class="ngrupo"><a href="#fab-4" class="n0">4 · Uso del telar, paso a paso</a><button type="button" class="plg" aria-label="Plegar" data-num="4"></button></div>
 <a href="#fab-4-1" class="n1" data-pad="4">4.1 · Partes de la máquina</a>
 <a href="#fab-4-2" class="n1" data-pad="4">4.2 · Puesta en marcha</a>
 <a href="#fab-4-3" class="n1" data-pad="4">4.3 · Operación normal</a>
@@ -66,7 +66,7 @@
 </nav>
 </aside>
 
-<button class="mtoggle" id="mt" aria-label="Menú">☰</button>
+<button type="button" class="mtoggle" id="mt" aria-label="Menú">☰</button>
 
 <main class="wrap">
   <header class="hero">
@@ -78,12 +78,12 @@
   </header>
 
   <div class="tabs" role="tablist">
-    <button class="tab activo" data-pane="web" role="tab" aria-selected="true">
+    <button type="button" class="tab activo" data-pane="web" role="tab" aria-selected="true">
       <span class="ic">▤</span>
       <span class="tt">Aplicación web</span>
       <span class="ts">Diseñar, guardar y ejecutar dibujos</span>
     </button>
-    <button class="tab" data-pane="fab" role="tab" aria-selected="false">
+    <button type="button" class="tab" data-pane="fab" role="tab" aria-selected="false">
       <span class="ic">⚙</span>
       <span class="tt">Telar en fábrica</span>
       <span class="ts">La máquina, la modificación y su uso</span>
@@ -266,6 +266,7 @@ cuánta tela se teje antes de que el dibujo vuelva a empezar.</p><div class="tip
 <p>Las dudas que más aparecieron sobre el uso de la aplicación, con la respuesta que quedó documentada.</p>
 <details><summary>¿Qué pasa si se corta Internet mientras el telar está tejiendo?</summary><div class="bd">Nada peligroso. El firmware está diseñado como <em>fail-safe</em>: si no puede comunicarse con el backend, no acciona ningún relé. El telar permanece en el estado en que estaba y la botonera física sigue funcionando con normalidad. Cuando la red se restablece, el sistema se sincroniza sin ejecutar órdenes acumuladas.</div></details><details><summary>¿Por qué una fila del dibujo es una pasada y no una celda?</summary><div class="bd">Porque así funciona la máquina. En cada pasada el telar inserta un hilo de trama a lo ancho de toda la tela, y en ese mismo instante se activan todos los elementos de selección que correspondan. Las columnas de una fila son simultáneas, no sucesivas. Para repetir una pasada, cada fila lleva un número de repeticiones al costado: cuántas pasadas seguidas se teje esa misma fila.</div></details><details><summary>¿Se guarda mi huella dactilar en algún servidor?</summary><div class="bd">No. El sistema usa el estándar WebAuthn: el dispositivo genera un par de llaves y la privada nunca sale del hardware del teléfono. Al servidor solo viaja la llave pública, que sirve para verificar una firma pero no permite reconstruir la huella. Si se perdiera la base de datos, no habría ninguna huella que filtrar.</div></details>
 <details><summary>¿Qué pasa si dos personas editan el mismo dibujo a la vez?</summary><div class="bd">La aplicación lo detecta. Si otra persona guardó un cambio en el dibujo mientras lo editabas, al guardar aparece el aviso «Dibujo modificado» y se carga la versión más reciente, con los cambios de la otra persona. Conviene revisar si falta alguno de los propios y volver a hacerlo. Así ninguna de las dos pisa sin darse cuenta lo que hizo la otra.</div></details>
+<details><summary>¿Por qué las pasadas y los metros aparecen con «≈»?</summary><div class="bd">Porque hasta que se instale y se valide el sensor de pasada, la aplicación no mide las pasadas: las estima por tiempo, al ritmo de la máquina (300 pasadas por minuto), mientras el tejido está en marcha en el dispositivo donde se tocó ▶. Si ese dispositivo bloquea la pantalla, cierra la aplicación o pierde la conexión, la estimación se detiene o se atrasa aunque el telar siga tejiendo, y el número queda por debajo de lo real. Por eso se muestra como aproximado. Con el sensor instalado, el conteo lo lleva la máquina y no depende de ninguna pantalla.</div></details>
 </section>
 </div>
 
@@ -370,8 +371,8 @@ No es el panel completo con microprocesador de los modelos más nuevos de Vamate
 </main>
 
 <footer>Manuales generados a partir de la documentación del proyecto · Última revisión: septiembre de 2026</footer>
-<div class="lb" id="lb"><span class="x">&times;</span><img id="lbimg" alt="Figura ampliada"><div class="cap" id="lbcap"></div></div>
-<button class="arriba" id="arriba" aria-label="Volver arriba"><span>Arriba</span></button>
+<div class="lb" id="lb"><span class="x">&times;</span><img id="lbimg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Figura ampliada"><div class="cap" id="lbcap"></div></div>
+<button type="button" class="arriba" id="arriba" aria-label="Volver arriba"><span>Arriba</span></button>
 <script src="app.js"></script>
 </body>
 </html>
