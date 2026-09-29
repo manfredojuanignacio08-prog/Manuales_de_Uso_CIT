@@ -172,14 +172,14 @@ cuánta tela se teje antes de que el dibujo vuelva a empezar.</p><div class="tip
 <figure class="tel"><img src="img/web_image5.jpg" alt="Pantalla Editor de Dibujo, con la grilla vacía lista para empezar." loading="lazy"><figcaption>Pantalla Editor de Dibujo, con la grilla vacía lista para empezar.</figcaption></figure>
 <h3 id="web-4-1">4.1. Definir el tamaño de la matriz</h3>
 <ul>
-<li><span class="num">1</span>En los campos correspondientes, escribir la cantidad de filas (&quot;Fil.&quot;) y de columnas (&quot;Col.&quot;) que va a tener la matriz. El sistema admite un mínimo de 2 y un máximo de 32 en cada dimensión.</li>
+<li><span class="num">1</span>En los campos correspondientes, escribir la cantidad de filas (&quot;Fil.&quot;) y de columnas (&quot;Col.&quot;) que va a tener la matriz. Las filas pueden ir de 1 a 100 y las columnas de 1 a 8, una por bobina de selección.</li>
 <li><span class="num">2</span>Tocar &quot;Aplicar&quot; para que el cambio de tamaño se refleje en la grilla.</li>
 </ul>
 <figure><img src="img/web_image12.jpg" alt="Ilustración del manual" loading="lazy"><figcaption>Aviso de validación: si se escribe un número fuera del rango permitido, la aplicación lo informa y corrige el valor.</figcaption></figure>
-<p>Si se ingresa un número fuera del rango permitido, el sistema avisa mediante un mensaje y ajusta automáticamente el valor al límite permitido más cercano (por ejemplo, si se ingresa un número mayor a 32, lo deja en 32).</p>
+<p>Si se ingresa un número fuera del rango permitido, el sistema avisa mediante un mensaje y ajusta automáticamente el valor al límite permitido más cercano (por ejemplo, si se escriben 150 filas, las deja en 100).</p>
 <h3 id="web-4-2">4.2. Nombrar el dibujo</h3>
 <p>En el campo de texto ubicado sobre la grilla se escribe el nombre con el que va a identificarse el dibujo dentro del sistema. Este nombre es el que después va a aparecer listado en la Biblioteca de Dibujos.</p>
-<figure><img src="img/web_image3.jpg" alt="Al lado del nombre, la aplicación muestra un indicador de estado del dibujo (Nuevo, Modificado, Guardado), que informa si hay cambios sin guardar en ese momento." loading="lazy"><figcaption>Al lado del nombre, la aplicación muestra un indicador de estado del dibujo (Nuevo, Modificado, Guardado), que informa si hay cambios sin guardar en ese momento.</figcaption></figure>
+<figure><img src="img/web_image3.jpg" alt="Al lado del nombre, la aplicación muestra un indicador de estado del dibujo (Nuevo, Editando, Modificado, Guardado), que informa si hay cambios sin guardar en ese momento." loading="lazy"><figcaption>Al lado del nombre, la aplicación muestra un indicador de estado del dibujo (Nuevo, Editando, Modificado, Guardado), que informa si hay cambios sin guardar en ese momento.</figcaption></figure>
 <h3 id="web-4-3">4.3. Estado real del telar</h3>
 <p>Debajo del nombre del dibujo hay una barra que muestra el estado real del telar, tomado directamente de la base de datos y del equipo de control físico (no es una simulación). Tiene dos indicadores:</p>
 <p>Conexión del equipo de control (ESP32):</p>
@@ -191,7 +191,7 @@ cuánta tela se teje antes de que el dibujo vuelva a empezar.</p><div class="tip
 <p>Estado de tejido:</p>
 <p>Indica si el telar está Tejiendo, Pausado, Detenido o en Error. Este dato proviene directamente de la base de datos del sistema, actualizada por las acciones reales que se ejecutan (ver el punto 4.6), y no de la animación que se ve en pantalla.</p>
 <p>Es fundamental entender la diferencia entre lo que se ve en la animación de la grilla y lo que efectivamente hace la máquina física.</p>
-<figure><img src="img/web_image1.jpg" alt="Ilustración del manual" loading="lazy"><figcaption>La grilla del editor: cada fila es una pasada del telar y cada columna un elemento de selección.</figcaption></figure>
+<figure><img src="img/web_image1.jpg" alt="Ilustración del manual" loading="lazy"><figcaption>La grilla del editor: cada fila es una pasada del telar y cada columna un elemento de selección; a la derecha, las repeticiones de cada fila.</figcaption></figure>
 <h3 id="web-4-4">4.4. Dibujar la matriz</h3>
 <ul>
 <li>Tocar una celda de la grilla la activa o la desactiva.</li>
@@ -209,7 +209,7 @@ cuánta tela se teje antes de que el dibujo vuelva a empezar.</p><div class="tip
 </ul>
 <h3 id="web-4-6">4.6. Controlar la ejecución del tejido: qué hace cada botón realmente</h3>
 <p>Esta es la sección más importante del manual, porque hay una diferencia real entre lo que cada botón parece hacer por su nombre y lo que efectivamente ejecuta hoy en el sistema. Se detalla a continuación el comportamiento exacto de cada uno, tal como está construido actualmente.</p>
-<figure class="tel"><img src="img/web_image14.jpg" alt="Editor con un patrón cargado. Los números dentro de las celdas son las pasadas de cada punto." loading="lazy"><figcaption>Editor con un patrón cargado. Los números dentro de las celdas son las pasadas de cada punto.</figcaption></figure>
+<figure class="tel"><img src="img/web_image14.jpg" alt="Editor con un dibujo cargado. Cada fila es una pasada: las celdas marcadas son las bobinas que se activan en ella, y el número de la derecha indica cuántas pasadas seguidas se teje esa fila." loading="lazy"><figcaption>Editor con un dibujo cargado. Cada fila es una pasada: las celdas marcadas son las bobinas que se activan en ella, y el número de la derecha indica cuántas pasadas seguidas se teje esa fila.</figcaption></figure>
 <p>Iniciar (▶):</p>
 <ul>
 <li>Si el dibujo que está cargado en el editor es distinto al que estaba asignado previamente al telar, el sistema asigna este nuevo dibujo, reinicia la posición de tejido al principio (fila 1, columna 1) y actualiza el estado real del telar a &quot;Tejiendo&quot; en la base de datos. Este cambio de estado es detectado por el equipo de control (ESP32), que a su vez acciona el relé conectado en paralelo al botón físico de Marcha del telar, arrancando la máquina real.</li>
