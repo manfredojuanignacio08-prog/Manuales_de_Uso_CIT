@@ -105,10 +105,10 @@ tener que dibujar cien filas iguales: se acepta cualquier número entre 1 y 9999
 <ul>
 <li>Se diseña la matriz o &quot;dibujo&quot; que el telar tiene que tejer.</li>
 <li>Se guarda ese dibujo en una biblioteca, para reutilizarlo cuando haga falta.</li>
-<li><b>Se envía el dibujo al telar y se controla su ejecución:</b> iniciar, pausar, retroceder. Además, la web refleja lo que se hace desde la botonera del telar: si un operario aprieta Marcha, Pausa o Retroceder en la máquina, el ESP32 lo detecta y la pantalla se actualiza sola.</li>
+<li><b>Se envía el dibujo al telar y se controla su ejecución:</b> iniciar, pausar, retroceder. Además, la web refleja lo que se hace desde la botonera del telar: si un operario aprieta Marcha, Pausa o Retroceder en la máquina, el ESP32 lo detecta y la pantalla se actualiza sola. Si la máquina se pone en marcha desde la botonera con el mismo dibujo abierto en el editor, la pantalla se suma al tejido y sigue la cuenta desde la fila en que está el telar.</li>
 <li><b>Se consulta el estado real del telar en todo momento:</b> si el equipo de control (ESP32) está conectado, y si el telar está tejiendo, pausado o detenido.</li>
 </ul>
-<p>Es importante remarcar el alcance actual del sistema: hoy la web controla el arranque y la parada del telar (mediante el ESP32, que aprieta a distancia los mismos botones físicos de Marcha y Pausa de la máquina). La web todavía no dicta la secuencia completa del dibujo al mecanismo del telar paso por paso, eso sigue siendo tarea de la lectora física (cinta perforada) mientras se desarrolla la siguiente etapa del proyecto. En otras palabras: la web decide y guarda **qué** se va a tejer, y puede arrancar y parar la máquina, pero todavía no reemplaza físicamente a la lectora de secuencia.</p>
+<p>Es importante remarcar el alcance actual del sistema: hoy la web controla el arranque y la parada del telar (mediante el ESP32, que aprieta a distancia los mismos botones físicos de Marcha, Pausa y Retroceder de la máquina). La web todavía no dicta la secuencia completa del dibujo al mecanismo del telar paso por paso, eso sigue siendo tarea de la lectora física (cinta perforada) mientras se desarrolla la siguiente etapa del proyecto. En otras palabras: la web decide y guarda **qué** se va a tejer, y puede arrancar y parar la máquina, pero todavía no reemplaza físicamente a la lectora de secuencia.</p>
 <p>La aplicación tiene tres pantallas principales, a las que se accede desde el menú inferior: Inicio, Editor y Biblioteca.</p>
 </section>
 <section id="web-2">
@@ -217,7 +217,7 @@ tener que dibujar cien filas iguales: se acepta cualquier número entre 1 y 9999
 </ul>
 <p>Pausa (⏸):</p>
 <ul>
-<li>Detiene la máquina real: al tocarlo, el sistema pasa el telar a &quot;Pausado&quot; en la base de datos. Ese cambio es detectado por el equipo de control, que acciona el relé conectado en paralelo al botón físico de Pausa del telar. Funciona aunque el tejido se haya arrancado desde la botonera o desde otra pantalla. (El botón &quot;Detener&quot; se eliminó: Pausa es el único botón de parada, igual que en la máquina.)</li>
+<li>Detiene la máquina real: al tocarlo, el sistema pasa el telar a &quot;Pausado&quot; en la base de datos. Ese cambio es detectado por el equipo de control, que acciona el relé conectado en paralelo al botón físico de Pausa del telar. Funciona aunque el tejido se haya arrancado desde la botonera o desde otra pantalla. Si no hay ningún trabajo abierto (por ejemplo, la máquina se arrancó a mano con Marcha sin un dibujo en curso), el telar queda en "Detenido": no hay nada que retomar. (El botón &quot;Detener&quot; se eliminó: Pausa es el único botón de parada, igual que en la máquina.)</li>
 <li>La pausa no cierra el trabajo: el dibujo sigue asignado y la posición se conserva. Para retomar se toca Iniciar (▶) y el tejido sigue exactamente desde donde quedó, no desde el principio. Si se cortó un hilo, la posición se corrige con Retroceder telar antes de retomar.</li>
 <li>Ninguna otra acción del editor (crear un dibujo nuevo, cambiar el tamaño, limpiar la grilla) le da la orden de Pausa al telar: solo este botón.</li>
 </ul>
