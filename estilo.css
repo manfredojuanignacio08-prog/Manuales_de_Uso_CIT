@@ -303,6 +303,8 @@ figure.tel img,figure img[src*="web_image"]{max-width:290px;display:block;margin
   border:1px solid var(--cream-bd);border-radius:var(--r);background:var(--panel)}
 figure{margin:1.8rem 0;text-align:center}
 figure figcaption{margin-top:.6rem}
+figure.medio img{max-width:380px;display:block;margin:0 auto}
+figure.ancho img{max-width:560px;display:block;margin:0 auto}
 
 /* ---------- título de la barra ---------- */
 
