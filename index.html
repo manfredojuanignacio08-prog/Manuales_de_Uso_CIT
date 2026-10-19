@@ -224,6 +224,7 @@
 <ul>
 <li>Si el dibujo cargado en el editor es distinto del que tiene asignado el telar, el sistema asigna este nuevo dibujo, arranca la posición de tejido al principio (fila 1) y actualiza el estado real del telar a &quot;Tejiendo&quot; en la base de datos. Este cambio de estado es detectado por el equipo de control (ESP32), que a su vez acciona el relé conectado en paralelo al botón físico de Marcha del telar, arrancando la máquina real. Si el telar tenía un trabajo abierto de otro dibujo, la aplicación pregunta antes de empezar, porque ese trabajo se cierra y ya no se puede retomar.</li>
 <li>Si es el mismo dibujo que el telar ya tiene asignado (por ejemplo, después de una pausa), el sistema no reinicia la posición: retoma el tejido en la fila y la pasada en que quedó, que toma de la base de datos (aunque la página se haya cerrado o recargado), y vuelve a poner el telar en &quot;Tejiendo&quot;, con lo que el equipo de control acciona Marcha.</li>
+<li>Mientras teje, la barra de abajo del editor dice en qué fila va el telar y, si esa fila se teje más de una pasada seguida, en qué pasada de la fila va: por ejemplo «Fila 2 / 7 · pasada 45 de 120». Así se sabe por qué parte del dibujo va la tela.</li>
 </ul>
 <p>Pausa (⏸):</p>
 <ul>
@@ -279,7 +280,7 @@
 <p>En esos casos, el resumen dice el motivo y el botón Aplicar queda deshabilitado.</p>
 <p><b>Mientras se teje:</b></p>
 <ul>
-<li>La barra de abajo del editor dice en qué fila va el telar y por qué pasada del intercalado va, por ejemplo «Fila 3 / 7 · intercalado 57 de 120».</li>
+<li>La barra de abajo del editor dice en qué fila va el telar y por qué pasada del intercalado va, por ejemplo «Fila 3 / 7 · pasada 57 de 120 del intercalado».</li>
 <li>Igual que el resto de la matriz, un intercalado no se puede cambiar mientras el dibujo tenga un trabajo abierto (ver el punto 4.6).</li>
 <li>El total de pasadas por vuelta del dibujo (400 en el ejemplo) incluye las pasadas de cada intercalado y figura en la ficha técnica en PDF.</li>
 </ul>
